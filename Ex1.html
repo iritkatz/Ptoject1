@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CANVAS</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="500">
+    Update your browser to enjoy canvas!
+  </canvas>
+
+  <script>
+
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    const lineCap = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
+
+    context.beginPath();
+    context.arc(100, 100, 75, 0, 2 * Math.PI, false); // Blue circle
+    context.lineWidth = 5;
+    context.strokeStyle  = "blue";
+    context.stroke();
+
+    context.beginPath();
+    context.arc(100, 100, 60, 0, 2 * Math.PI, false); // inner circle
+    context.lineWidth = 1;
+    context.strokeStyle  = "black";
+    context.setLineDash([5, 5]);
+    console.log(context.getLineDash());
+    context.stroke();
+
+    // Draw lines
+    /*
+    context.strokeStyle = 'black';
+    context.setLineDash([0, 0]);
+    for (let i = 0; i < lineCap.length; i++) {
+      context.lineWidth = 3;
+      context.lineCap = lineCap[i];
+      context.beginPath();
+      context.moveTo(50 + i * 50, 40);
+      context.lineTo(50 + i * 50, 55);
+      context.stroke();
+    }
+    */
+
+    //Long line
+    context.beginPath();       // Start a new path
+    context.moveTo(110, 110);    // Move the pen to (30, 50)
+    context.lineTo(50, 70);  // Draw a line to (150, 100)
+    context.lineWidth = 3;
+    context.setLineDash([0, 0]);
+    context.stroke();          // Render the path
+
+    //small line
+    context.beginPath();       // Start a new path
+    context.moveTo(100, 90);    // Move the pen to (30, 50)
+    context.lineTo(100, 150);  // Draw a line to (150, 100)
+    context.lineWidth = 5;
+    context.setLineDash([0, 0]);
+    context.stroke();          // Render the path
+
+    //Red line
+    context.beginPath();       // Start a new path
+    context.moveTo(97, 102);    // Move the pen to (30, 50)
+    context.lineTo(50, 120);  // Draw a line to (150, 100)
+    context.lineWidth = 3;
+    context.strokeStyle  = "red";
+    context.setLineDash([0, 0]);
+    context.stroke();          // Render the path
+
+    //small red line
+    context.beginPath();       // Start a new path
+    context.moveTo(103, 100);    // Move the pen to (30, 50)
+    context.lineTo(116, 95);  // Draw a line to (150, 100)
+    context.lineWidth = 3;
+    context.strokeStyle  = "red";
+    context.setLineDash([0, 0]);
+    context.stroke();          // Render the path
+
+    //Red circle
+    context.beginPath();
+    context.arc(100, 100, 5, 0, 2 * Math.PI, false); // Blue circle
+    context.lineWidth = 3;
+    context.strokeStyle  = "red";
+    context.stroke();
+
+    //Red full circle
+    context.beginPath();
+    context.arc(46, 123, 5, 0, 2 * Math.PI, false); // Blue circle
+    context.lineWidth = 3;
+    context.strokeStyle  = "red";
+    context.fillStyle = "grey";
+    context.fill();
+    context.stroke();
+
+
+
+ </script>
+</body>
+</html>

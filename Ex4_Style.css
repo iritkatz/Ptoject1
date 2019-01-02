@@ -1,0 +1,28 @@
+/* Style Sheet */
+.p1_p5 {
+  font-size: 50px;
+  background-color: #ff0000;
+  border: 2px dashed #3cb371;
+}
+
+.p2_p6 {
+  font-size: 50pt;
+  background-color: #0000ff;
+  border: 2px solid #ee82ee;
+}
+
+.p3_p7 {
+  font-size: 5em;
+  background-color: #ee82ee;
+  border: 2px groove #0000ff;
+}
+
+.p4_p8 {
+  font-size: 100%;
+  background-color: #3cb371;
+  border: 2px inset #3cb371;
+}
+
+.padd {
+  padding: 5px 5px;
+}

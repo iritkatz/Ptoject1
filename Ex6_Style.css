@@ -1,0 +1,29 @@
+/* Style Sheet */
+
+body {
+  direction: rtl;
+  color: red;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+h2 {
+  /* direction: rtl; -> no need because we have it in body */
+  text-decoration: underline;
+  color: green;
+  font-style: oblique;
+}
+
+p {
+  direction: ltr;
+  font-size: 2em;
+  font-style: normal;
+  color: grey;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <style>
+
+    fieldset {
+      padding: 30px 30px 30px 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <form name="myForm" action="">
+    <fieldset>
+      Full Name: <input type="text" name="FullName" placeholder="John Doe" required maxlength="20">
+      <br><br>
+      Age: <input type="number" name="Age" placeholder="26" required>
+      <br><br>
+      Birth Date: <input type="date" name="BirthDate" required>
+      <br><br>
+      Email: <input type="email" name="Email" placeholder="JohnDoe@gmail.com" required>
+      <br><br>
+      Cell Phone: <input type="tel" name="Phone" placeholder="050-4589876" pattern="[0-9]{3}-[0-9]{7}" required>
+      <br><br>
+      Course Name: <input type="text" name="CourseName" placeholder="Computer Sciense" required>
+      <br><br>
+      Course Code: <input type="number" name="CourseCode" placeholder="20000" min="10000" max="99999" required>
+      <br><br>
+      <input type="submit" value="submit" onclick="validateAndSend()">
+    </fieldset>
+  </form>
+
+  <script>
+    //if one of the fields(CourseName or CourseCode) are filled, then drop the required attribute
+    function validateAndSend() {
+        if (myForm.CourseName.value == '' && myForm.CourseCode.value != '' || myForm.CourseName.value != '' && myForm.CourseCode.value == '') {
+            myForm.CourseName.removeAttribute("required");
+            myForm.CourseCode.removeAttribute("required");
+          }
+    }
+  </script>
+</body>
+</html>
